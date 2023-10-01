@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dummy-nextjs
-          image: "tomica1911/dummy-nextjs:latest"
+          image: "tomica1911/dummy-nextjs:1"
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

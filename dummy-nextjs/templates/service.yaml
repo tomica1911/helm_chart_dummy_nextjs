@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "dummy-nextjs-chart.fullname" . }}
+  name: dummy-nextjs
   labels:
-    {{- include "dummy-nextjs-chart.labels" . | nindent 4 }}
+    dummy-nextjs
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
+    - port: 80
+      targetPort: 3000
       protocol: TCP
       name: http
   selector:
-    {{- include "dummy-nextjs-chart.selectorLabels" . | nindent 4 }}
+    dummy-nextjs

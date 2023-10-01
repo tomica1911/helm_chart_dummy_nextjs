@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: dummy-nextjs
   labels:
-    dummy-nextjs-label
+    dummy-nextjs
 spec:
   replicas: 3
   selector:

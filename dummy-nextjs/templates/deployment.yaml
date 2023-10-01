@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-nextjs
+  labels:
+    dummy-nextjs-label
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      dummy-nextjs
+  template:
+    metadata:
+      labels:
+        dummy-nextjs
+    spec:
+      containers:
+        - name: dummy-nextjs
+          image: "tomica1911/dummy-nextjs:latest"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http

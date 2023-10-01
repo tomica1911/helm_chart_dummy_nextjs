@@ -21,7 +21,7 @@ spec:
           ports:
             - name: http
               containerPort: 3000
-              protocol: UDP
+              protocol: SCTP
           livenessProbe:
             httpGet:
               path: /

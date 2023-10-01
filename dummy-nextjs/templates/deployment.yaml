@@ -8,7 +8,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      dummy-nextjs
+      app: dummy-nextjs
   template:
     metadata:
       labels:

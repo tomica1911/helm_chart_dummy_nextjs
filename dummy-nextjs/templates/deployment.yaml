@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        dummy-nextjs
+        app: dummy-nextjs
     spec:
       containers:
         - name: dummy-nextjs

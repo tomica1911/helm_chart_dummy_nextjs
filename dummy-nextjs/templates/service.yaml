@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: dummy-nextjs
   labels:
-    dummy-nextjs
+    app: dummy-nextjs
 spec:
   type: NodePort
   ports:

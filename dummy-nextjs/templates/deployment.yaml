@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dummy-nextjs
+  name: dummy-nextjs-test
   labels:
-    app: dummy-nextjs
+    app: dummy-nextjs-test
 spec:
   replicas: 3
   selector:
